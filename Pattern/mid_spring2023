@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int row;
+    printf("Enter the value for row;");
+    scanf("%d",&row);
+    
+
+
+
+    return 0;
+}
