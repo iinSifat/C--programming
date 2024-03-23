@@ -9,8 +9,7 @@ int main()
     }
     printf("position:\n");
     scanf("%d",&pos);
-    printf("num:");
-    scanf("%d",&num);
+    
    int  temp=a[pos-1];
     for(int i=pos-1;i<n-1;i++){
         a[i]=a[i+1];
