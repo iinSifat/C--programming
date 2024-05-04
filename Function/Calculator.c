@@ -1,15 +1,15 @@
 #include <stdio.h>
 int sum(int a, int b);
-int def(int a, int b);          //Functions declarations
+int def(int a, int b); // Functions declarations
 int multipli(int a, int b);
-int division(int a, int b);     
+int division(int a, int b);
 
 int main()
 {
     printf(".........Calculator with fuction........\n");
     char choice;
     int num1, num2;
-    printf("Enter the first number:");//Taking inputes
+    printf("Enter the first number:"); // Taking inputes
     scanf("%d", &num1);
     printf("Enter the second number:");
     scanf("%d", &num2);
@@ -22,7 +22,7 @@ int main()
     printf("Your choice is:");
     scanf(" %c", &choice);
 
-    if (choice == '+')                  //Functions calling
+    if (choice == '+') // Functions calling
         printf("Sum of the numbers is: %d", sum(num1, num2));
     if (choice == '-')
         printf("Subtraction of the numbers is: %d", def(num1, num2));
@@ -33,7 +33,7 @@ int main()
 
     return 0;
 }
-int sum(int a, int b)//argument passing and process
+int sum(int a, int b) // argument passing and process
 {
     return a + b;
 }

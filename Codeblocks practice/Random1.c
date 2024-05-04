@@ -1,28 +1,68 @@
 #include<stdio.h>
+#include<string.h>
+
 int main()
 {
-    int arr[90],n,sum=0;
-    printf("Input n:");
-    scanf("%d",&n);
-    arr[0]=0;
-    arr[1]=1;
-    for(int i=2;i<n;i++){
+    char str[100]="A";
+     char str2[100]="A";
 
+     int i=0,len;
 
-        arr[i]=arr[i-1]+arr[i-2];
+     while(str[i]!='\0')// string length without built in function
+     {
+         i++;
 
-
-
-    }
-     for(int i=0;i<n;i++){
-            sum+=arr[i];
      }
+     len=i;
 
-    printf("Sum=%d",sum);
-    puts("");
-    for(int i=0;i<n;i++){
-        printf("%d ",arr[i]);
-    }
-    return 0;
+     printf("Length: %d\n",len);
+     printf("Length using string: %d\n",strlen(str));
 
+     i=0;
+
+     while(str[i]!='\0'||str2[i]!='\0')//string copy without built in function
+     {
+         str2[i]=str[i]; // str2 will be changed
+         i++;
+     }
+     puts(str2);
+
+     int flag=0;   //String comparison
+     i=0;
+
+     while(str[i]!='\0'||str2[i]!='\0'){
+             if(str[i]>str2[i])
+             {
+                 flag=1;
+                 break;
+            }
+         i++;
+     }
+     if(flag==1) printf("Not  Equal ");
+      if (flag==0)printf("Equal");
+
+//String concatenation
+
+    char string1 [100]="My country is ";
+    char string2 [100]= "Bangladesh";
+
+    int i=0;
+    int len;
+
+    while(string1[i]){
+        i++;
     }
+
+    len=i;
+
+    int j=0;
+
+
+    while(string2[j]){
+        string1[len+j]=string2[j];
+        j++;
+    }
+
+    printf("Concatenation: %s", string1);
+
+}
